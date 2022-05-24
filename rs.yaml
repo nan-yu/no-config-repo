@@ -1,0 +1,11 @@
+
+apiVersion: configsync.gke.io/v1beta1
+kind: RepoSync
+metadata:
+  name: repo-sync
+  namespace: bookinfo
+spec:
+  sourceType: oci
+  oci:
+    image: us-docker.pkg.dev/stolos-dev/config-sync-ci-public/namespace-repo-bookinfo
+    auth: none
